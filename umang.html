@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Umang</title>
+  <style>
+    body { background: #fab1a0; font-family: Arial; text-align: center; padding: 20px; }
+    .slideshow { max-width: 400px; margin: auto; position: relative; }
+    .slide { display: none; }
+    img { width: 100%; border-radius: 10px; }
+    .text { margin-top: 20px; font-size: 1.2em; }
+  </style>
+</head>
+<body>
+  <h2>Great! This is the best option you got 💖</h2>
+  <div class="slideshow">
+    <div class="slide"><img src="photo1.jpg"></div>
+    <div class="slide"><img src="photo2.jpg"></div>
+    <div class="slide"><img src="photo3.jpg"></div>
+  </div>
+  <div class="text">Since you got a perfect choice, I don't have anything further to say.<br> Look, we already look so good together 😍<br><br><b>So when is the date?</b></div>
+  <script>
+    let index = 0;
+    function showSlides() {
+      let slides = document.getElementsByClassName("slide");
+      for (let i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
+      index++;
+      if (index > slides.length) { index = 1; }
+      slides[index-1].style.display = "block";
+      setTimeout(showSlides, 2000);
+    }
+    showSlides();
+  </script>
+</body>
+</html>
